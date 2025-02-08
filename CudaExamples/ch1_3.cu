@@ -1,8 +1,8 @@
-﻿#include "cuda_runtime.h"
+#include "cuda_runtime.h"
 #include "device_launch_parameters.h"
 #include <stdio.h>
 
-__global__ void addArrays(
+__global__ void addArrays_ch1_3(
     int* inputArray1,
     int* inputArray2,
     int* resultArray,
@@ -20,7 +20,7 @@ __global__ void addArrays(
     }
 }
 
-int main() {
+int ch1_3_main() {
     const int ARRAY_SIZE = 10;
     const int BYTES_NEEDED = ARRAY_SIZE * sizeof(int);
 
@@ -54,7 +54,7 @@ int main() {
     const int NUMBER_OF_BLOCKS = 2;
 
     // Launch parallel processing
-    addArrays<<<NUMBER_OF_BLOCKS, THREADS_PER_BLOCK>>> (
+    addArrays_ch1_3<<<NUMBER_OF_BLOCKS,THREADS_PER_BLOCK>>>(
         deviceInput1,
         deviceInput2,
         deviceResult,

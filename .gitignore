@@ -403,5 +403,7 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
+experiment_files
+
 # JetBrains Rider
 *.sln.iml

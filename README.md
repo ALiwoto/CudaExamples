@@ -1,27 +1,22 @@
 # CudaExamples
 
-A repository containing multiple examples of Cuda programming language for beginners.
+A repository containing multiple examples of Cuda programming language for beginners, with step-by-step examples and chapters I personally used to learn the language!
 
 At the time of writing this repository, I am also a beginner, so don't expect too much from it.
 
-## Basic CUDA thread launching
+> NOTE: You are expected to know at least basic C++ before starting this tutorial series.
 
-```cuda
-// Launch 1000 threads in blocks of 256
-myKernel<<<4, 256>>>(args);  // 4 blocks × 256 threads = 1024 threads
-```
+## Getting started
 
-Think of CUDA threads like this:
+1. Make sure you have Visual Studio installed, from [here](https://visualstudio.microsoft.com/downloads/)
+2. Download Cuda Toolkit from [here](https://developer.nvidia.com/cuda-downloads).
+3. Make sure everything is installed correctly by running `nvcc --version`.
+4. You are ready to go through the codes in this repository!
 
-```cuda
-Grid (all threads)
-├── Block 0
-│   ├── Thread 0
-│   ├── Thread 1
-│   └── ... (up to blockDim)
-├── Block 1
-│   ├── Thread 0
-│   ├── Thread 1
-│   └── ... (up to blockDim)
-└── ... (more blocks)
-```
+You can then start reading from [Chapter1](./Chapters/Chapter1/Chapter1_1.md).
+
+Make sure to run each code yourself to actually see what is happening and then read the explanation of each section! Good luck.
+
+## Contributing
+
+You are more than welcome to contribute to this repository by fixing my mistakes or adding new examples/chapters! Thanks for your consideration in advance!

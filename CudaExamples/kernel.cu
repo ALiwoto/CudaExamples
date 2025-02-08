@@ -3,15 +3,17 @@
 
 #include <stdio.h>
 
-__global__ void helloFromGPU() {
-    printf("Hello World from GPU!\n");
+__global__ void printThreadInfo() {
+    printf("Block: %d, Thread: %d, Global Thread ID: %d\n",
+        blockIdx.x,
+        threadIdx.x,
+        blockIdx.x * blockDim.x + threadIdx.x);
 }
 
 int main() {
-    printf("Hello World from CPU!\n");
-    
-    helloFromGPU<<<1, 1>>>();
+    // Launch with 2 blocks, 4 threads each
+    printThreadInfo<<<2, 4 >>>();
     cudaDeviceSynchronize();
-    
+
     return 0;
 }

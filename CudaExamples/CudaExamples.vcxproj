@@ -81,6 +81,7 @@
     <CudaCompile Include="ch1_2.cu" />
     <CudaCompile Include="ch1_3.cu" />
     <CudaCompile Include="ch1_4.cu" />
+    <CudaCompile Include="ch1_5.cu" />
     <CudaCompile Include="kernel.cu" />
     <CudaCompile Include="kernel_example.cu" />
   </ItemGroup>

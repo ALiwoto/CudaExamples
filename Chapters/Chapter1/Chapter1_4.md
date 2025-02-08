@@ -3,8 +3,10 @@
 ## Shared memory and thread cooperation - a parallel reduction example
 
 ```cuda
+#include <cuda.h>
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
+#include <cuda_runtime_api.h>
 #include <stdio.h>
 
 // Maximum threads per block for this example
@@ -110,6 +112,7 @@ This example introduces several new concepts:
 5. Dynamic calculation of grid dimensions
 
 Key points to note:
+
 - Shared memory is much faster than global memory
 - Threads in a block can cooperate using shared memory
 - `__syncthreads()` ensures all threads reach a point before continuing

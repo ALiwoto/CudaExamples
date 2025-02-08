@@ -14,6 +14,9 @@
     <CudaCompile Include="ch1_4.cu">
       <Filter>Chapter1</Filter>
     </CudaCompile>
+    <CudaCompile Include="ch1_5.cu">
+      <Filter>Chapter1</Filter>
+    </CudaCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Chapter1">
